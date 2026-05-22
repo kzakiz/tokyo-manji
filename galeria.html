@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Galería</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav class="navbar">
+    <div class="nav-logo">TOKYO MANJI</div>
+
+    <div class="nav-links">
+        <a href="requisitos.html">Requisitos</a>
+        <a href="jerarquia.html">Jerarquía</a>
+        <a href="galeria.html">Galería</a>
+        <a href="top10.html">Top 10</a>
+    </div>
+</nav>
+
+  <a href="index.html" class="home-button">
+    <span>Home</span>
+</a>
+<div class="snow"></div>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Galería | Tokyo Manji</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-logo">TOKYO MANJI</div>
+
+        <div class="nav-links">
+            <a href="requisitos.html">Requisitos</a>
+            <a href="jerarquia.html">Jerarquía</a>
+            <a href="galeria.html">Galería</a>
+            <a href="top10.html">Top 10</a>
+        </div>
+    </nav>
+
+    <!-- BOTÓN INICIO -->
+    <a href="index.html" class="home-button">
+        <span>⟵ Inicio</span>
+    </a>
+
+    <div class="snow"></div>
+
+    <!-- GALERÍA -->
+    <section class="card page-card">
+
+        <h2>Galería del clan</h2>
+
+        <p class="gallery-text">
+            Algunos momentos importantes, recuerdos y capturas
+            que representan el crecimiento y la esencia de Tokyo Manji.
+        </p>
+
+        <!-- FOTO PRINCIPAL -->
+        <div class="featured-photo">
+            <img src="fotoprincipal.jpg" onclick="openImage(this.src)">
+        </div>
+
+        <!-- FOTOS SECUNDARIAS -->
+        <div class="gallery-grid-clean">
+
+            <div class="gallery-card">
+                <img src="foto1.jpg" onclick="openImage(this.src)">
+            </div>
+
+            <div class="gallery-card">
+                <img src="foto2.jpg" onclick="openImage(this.src)">
+            </div>
+
+            <div class="gallery-card">
+                <img src="foto3.jpg" onclick="openImage(this.src)">
+            </div>
+
+            <div class="gallery-card">
+                <img src="foto4.jpg" onclick="openImage(this.src)">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div id="imageViewer" class="image-viewer" onclick="closeImage()">
+        <span class="close-viewer">&times;</span>
+        <img id="expandedImg">
+    </div>
+
+    <script>
+        function openImage(src){
+            document.getElementById("imageViewer").style.display = "flex";
+            document.getElementById("expandedImg").src = src;
+        }
+
+        function closeImage(){
+            document.getElementById("imageViewer").style.display = "none";
+        }
+    </script>
+    
+
+</body>
+</html>
